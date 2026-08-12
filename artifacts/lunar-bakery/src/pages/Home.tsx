@@ -3,6 +3,11 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { motion } from 'framer-motion';
 import heroImage from '@assets/lunar_og.jpg';
+import imgKouignTray from '@assets/lunar_kouign_tray.jpg';
+import imgNatasKouigns from '@assets/lunar_natas_kouigns.jpg';
+import imgKouignGold from '@assets/lunar_kouign_gold.jpg';
+import imgGiftBox from '@assets/lunar_gift_box.jpg';
+import imgAfternoonTea from '@assets/lunar_afternoon_tea.jpg';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 24 },
@@ -23,30 +28,30 @@ const SEASONS: { key: Season; label: string }[] = [
   { key: 'winter', label: 'Winter' },
 ];
 
-const MENU: Record<Season, { name: string; price: string }[]> = {
+const MENU: Record<Season, { name: string; price: string; img: string }[]> = {
   spring: [
-    { name: 'Strawberry Mochi Tart', price: '$7' },
-    { name: 'Matcha Croissant', price: '$6' },
-    { name: 'Cherry Blossom Financier', price: '$5' },
-    { name: 'Earl Grey Kouign-Amann', price: '$8' },
+    { name: 'Strawberry Mochi Tart', price: '$7', img: imgGiftBox },
+    { name: 'Matcha Croissant', price: '$6', img: imgNatasKouigns },
+    { name: 'Cherry Blossom Financier', price: '$5', img: imgKouignTray },
+    { name: 'Earl Grey Kouign-Amann', price: '$8', img: imgKouignGold },
   ],
   summer: [
-    { name: 'Pastel de Nata', price: '$6' },
-    { name: 'Mango Sheng Tai Cake', price: '$7' },
-    { name: 'Pineapple Cake', price: '$5' },
-    { name: 'Salt Bread', price: '$4' },
+    { name: 'Pastel de Nata', price: '$6', img: heroImage },
+    { name: 'Kouign-Amann', price: '$7', img: imgKouignTray },
+    { name: 'Natas & Kouigns', price: '$6', img: imgNatasKouigns },
+    { name: 'Kouign with Gold', price: '$8', img: imgKouignGold },
   ],
   fall: [
-    { name: 'Taro Puff', price: '$6' },
-    { name: 'Osmanthus Madeleine', price: '$5' },
-    { name: 'Chestnut Mont Blanc', price: '$9' },
-    { name: 'Black Sesame Kouign-Amann', price: '$8' },
+    { name: 'Taro Puff', price: '$6', img: imgNatasKouigns },
+    { name: 'Osmanthus Madeleine', price: '$5', img: imgKouignGold },
+    { name: 'Chestnut Mont Blanc', price: '$9', img: imgGiftBox },
+    { name: 'Black Sesame Kouign-Amann', price: '$8', img: imgKouignTray },
   ],
   winter: [
-    { name: 'Tangerine Cake', price: '$7' },
-    { name: 'Red Bean Danish', price: '$6' },
-    { name: 'Longan Bun', price: '$5' },
-    { name: 'Yuja Éclair', price: '$7' },
+    { name: 'Tangerine Cake', price: '$7', img: imgGiftBox },
+    { name: 'Red Bean Danish', price: '$6', img: imgKouignTray },
+    { name: 'Longan Bun', price: '$5', img: imgNatasKouigns },
+    { name: 'Yuja Éclair', price: '$7', img: imgKouignGold },
   ],
 };
 
@@ -78,10 +83,7 @@ export default function Home() {
             variants={staggerContainer}
             className="flex flex-col items-center text-center px-6 pt-12 pb-16 md:pt-16 md:pb-20"
           >
-            <motion.div
-              variants={fadeInUp}
-              className="w-20 h-[3px] bg-primary mb-7"
-            />
+            <motion.div variants={fadeInUp} className="w-20 h-[3px] bg-primary mb-7" />
 
             <motion.h1
               variants={fadeInUp}
@@ -152,12 +154,8 @@ export default function Home() {
               variants={fadeInUp}
               className="mb-10"
             >
-              <p className="text-xs font-bold tracking-[0.2em] uppercase text-secondary mb-3">
-                03
-              </p>
-              <h2 className="font-serif text-3xl md:text-4xl mb-8">
-                This Season's Menu
-              </h2>
+              <p className="text-xs font-bold tracking-[0.2em] uppercase text-secondary mb-3">03</p>
+              <h2 className="font-serif text-3xl md:text-4xl mb-8">This Season's Menu</h2>
 
               {/* Season tabs */}
               <div className="flex flex-wrap gap-0">
@@ -188,10 +186,9 @@ export default function Home() {
             >
               {MENU[activeSeason].map((item) => (
                 <motion.div key={item.name} variants={fadeInUp} className="group flex flex-col">
-                  {/* Image with price badge */}
                   <div className="relative overflow-hidden bg-muted aspect-square">
                     <img
-                      src={heroImage}
+                      src={item.img}
                       alt={item.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
@@ -199,7 +196,6 @@ export default function Home() {
                       {item.price}
                     </span>
                   </div>
-                  {/* Name */}
                   <p className="mt-3 text-sm font-sans text-primary leading-snug">{item.name}</p>
                 </motion.div>
               ))}
@@ -232,8 +228,8 @@ export default function Home() {
               <motion.div variants={fadeInUp} className="w-full md:w-5/12 shrink-0">
                 <div className="overflow-hidden aspect-[4/3]">
                   <img
-                    src={heroImage}
-                    alt="Custom celebration cake"
+                    src={imgGiftBox}
+                    alt="Custom celebration cake gift box"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -254,7 +250,7 @@ export default function Home() {
                     window.open('https://www.lunarbakery.com/s/order', '_blank');
                   }}
                 >
-                  <div className="border border-border/60 px-4 py-3 mb-0 focus-within:border-primary transition-colors">
+                  <div className="border border-border/60 px-4 py-3 focus-within:border-primary transition-colors">
                     <input
                       type="text"
                       placeholder="Your name"
@@ -299,8 +295,8 @@ export default function Home() {
               <motion.div variants={fadeInUp} className="w-full md:w-5/12 shrink-0">
                 <div className="overflow-hidden aspect-[4/3]">
                   <img
-                    src={heroImage}
-                    alt="Lunar Bakery story"
+                    src={imgAfternoonTea}
+                    alt="Lunar Bakery afternoon tea spread"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>

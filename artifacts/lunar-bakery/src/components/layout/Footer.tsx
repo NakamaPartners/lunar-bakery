@@ -10,7 +10,7 @@ export function Footer() {
         {/* Logo + tagline */}
         <div className="flex flex-col">
           <div className="bg-primary-foreground/10 p-3 inline-block mb-5 w-36">
-            <img src={logo} alt="Lunar Artisan Baked Goods" className="w-full h-auto" />
+            <img src={logo} alt="Lunar Artisan Baked Goods" className="w-full h-auto" style={{ filter: 'brightness(0) invert(1)' }} />
           </div>
           <p className="font-serif italic text-primary-foreground/70 text-sm mb-1">
             French pastry, Taiwanese soul.
