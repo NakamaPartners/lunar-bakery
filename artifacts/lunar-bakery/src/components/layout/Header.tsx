@@ -22,7 +22,7 @@ export function Header() {
       <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
 
         {/* Desktop: Logo left */}
-        <div className="flex items-center w-1/3">
+        <div className="hidden md:flex items-center w-1/3">
           <Link href="/" className="block w-36 md:w-40 shrink-0">
             <img src={logo} alt="Lunar Artisan Baked Goods" className="w-full h-auto mix-blend-multiply" />
           </Link>
