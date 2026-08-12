@@ -34,20 +34,27 @@ export default function Home() {
             variants={staggerContainer}
             className="w-full max-w-5xl mx-auto flex flex-col items-center text-center"
           >
+            <motion.p
+              variants={fadeInUp}
+              className="text-xs md:text-sm font-sans tracking-[0.25em] uppercase text-secondary mb-8 font-medium"
+            >
+              San Francisco &middot; Est. 2020 &middot; Third-Culture Bakery
+            </motion.p>
+
             <motion.h1 
               variants={fadeInUp}
               className="font-serif text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight text-primary leading-[1.1] mb-8"
             >
-              Taiwanese memory.
+              French pastry,
               <br />
-              <span className="italic text-secondary">French technique.</span>
+              <span className="italic text-secondary">Taiwanese soul.</span>
             </motion.h1>
             
             <motion.p 
               variants={fadeInUp}
-              className="max-w-xl text-lg md:text-xl text-primary/80 mb-16 leading-relaxed"
+              className="max-w-xl text-lg md:text-xl text-primary/70 mb-16 leading-relaxed"
             >
-              A quiet, considered bakery inspired by the seasons. Found only if you're paying attention.
+              Hand-crafted French pastries with Taiwanese flavors, inspired by the seasons. A quiet bakery found only if you're paying attention.
             </motion.p>
             
             <motion.div variants={fadeInUp} className="w-full aspect-[4/3] md:aspect-[16/9] lg:aspect-[21/9] relative overflow-hidden mt-4 md:mt-8">
@@ -134,7 +141,7 @@ export default function Home() {
         </section>
 
         {/* CUSTOM CAKES & CATERING */}
-        <section className="w-full px-6 py-24 md:py-32 bg-[hsl(38.8,30%,92%)]">
+        <section className="w-full px-6 py-24 md:py-32 bg-muted">
           <motion.div 
             initial="hidden"
             whileInView="visible"

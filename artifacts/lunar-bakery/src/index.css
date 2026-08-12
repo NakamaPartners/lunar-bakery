@@ -52,36 +52,36 @@
 
 /* LIGHT MODE */
 :root {
-  --background: 38.2 52.4% 96.3%; /* #FBF7F0 */
-  --foreground: 22.9 61% 20.2%; /* #532C14 */
+  --background: 38 60% 96%; /* Warm cream #FBF7EE */
+  --foreground: 218 55% 16%; /* Deep navy #152040 */
   
-  --border: 22.9 20% 85%;
+  --border: 218 20% 82%;
   
-  --card: 38.2 52.4% 96.3%;
-  --card-foreground: 22.9 61% 20.2%;
-  --card-border: 22.9 20% 85%;
+  --card: 38 60% 96%;
+  --card-foreground: 218 55% 16%;
+  --card-border: 218 20% 82%;
   
-  --popover: 38.2 52.4% 96.3%;
-  --popover-foreground: 22.9 61% 20.2%;
-  --popover-border: 22.9 20% 85%;
+  --popover: 38 60% 96%;
+  --popover-foreground: 218 55% 16%;
+  --popover-border: 218 20% 82%;
   
-  --primary: 22.9 61% 20.2%; /* Deep brown #532C14 */
-  --primary-foreground: 38.2 52.4% 96.3%; /* Cream */
+  --primary: 218 55% 16%; /* Deep navy #152040 */
+  --primary-foreground: 40 65% 92%; /* Warm cream #F5EDD8 */
   
-  --secondary: 13.7 56.5% 39.6%; /* Terracotta #9E462C */
-  --secondary-foreground: 0 0% 100%;
+  --secondary: 42 54% 52%; /* Warm gold #C9A044 */
+  --secondary-foreground: 218 55% 12%;
   
-  --muted: 38 20% 90%;
-  --muted-foreground: 22.9 30% 40%;
+  --muted: 218 20% 92%;
+  --muted-foreground: 218 30% 40%;
   
-  --accent: 13.7 56.5% 39.6%;
-  --accent-foreground: 0 0% 100%;
+  --accent: 42 54% 52%; /* Warm gold */
+  --accent-foreground: 218 55% 12%;
   
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 100%;
   
-  --input: 22.9 30% 80%;
-  --ring: 13.7 56.5% 39.6%;
+  --input: 218 20% 78%;
+  --ring: 42 54% 52%;
 
   --app-font-sans: 'PT Sans', 'Inter', sans-serif;
   --app-font-serif: 'Lora', Georgia, serif;
@@ -90,36 +90,36 @@
 }
 
 .dark {
-  --background: 22.9 61% 20.2%; /* #532C14 */
-  --foreground: 38.2 52.4% 96.3%; /* #FBF7F0 */
+  --background: 218 55% 10%; /* Very dark navy */
+  --foreground: 40 65% 92%; /* Warm cream */
   
-  --border: 22.9 30% 30%;
+  --border: 218 30% 25%;
   
-  --card: 22.9 61% 20.2%;
-  --card-foreground: 38.2 52.4% 96.3%;
-  --card-border: 22.9 30% 30%;
+  --card: 218 55% 13%;
+  --card-foreground: 40 65% 92%;
+  --card-border: 218 30% 25%;
   
-  --popover: 22.9 61% 20.2%;
-  --popover-foreground: 38.2 52.4% 96.3%;
-  --popover-border: 22.9 30% 30%;
+  --popover: 218 55% 13%;
+  --popover-foreground: 40 65% 92%;
+  --popover-border: 218 30% 25%;
   
-  --primary: 38.2 52.4% 96.3%; 
-  --primary-foreground: 22.9 61% 20.2%;
+  --primary: 40 65% 92%; /* Cream on dark */
+  --primary-foreground: 218 55% 16%;
   
-  --secondary: 13.7 56.5% 39.6%; /* Terracotta */
-  --secondary-foreground: 0 0% 100%;
+  --secondary: 42 54% 52%; /* Warm gold */
+  --secondary-foreground: 218 55% 12%;
   
-  --muted: 22.9 40% 15%;
-  --muted-foreground: 38.2 30% 80%;
+  --muted: 218 40% 18%;
+  --muted-foreground: 218 20% 70%;
   
-  --accent: 13.7 56.5% 39.6%;
-  --accent-foreground: 0 0% 100%;
+  --accent: 42 54% 52%;
+  --accent-foreground: 218 55% 12%;
   
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 100%;
   
-  --input: 22.9 30% 30%;
-  --ring: 13.7 56.5% 39.6%;
+  --input: 218 30% 30%;
+  --ring: 42 54% 52%;
 }
 
 @layer base {

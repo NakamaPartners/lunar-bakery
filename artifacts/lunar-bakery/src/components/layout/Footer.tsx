@@ -9,8 +9,11 @@ export function Footer() {
           <div className="bg-primary-foreground p-4 rounded-sm inline-block mb-6 w-48">
              <img src={logo} alt="Lunar Artisan Baked Goods" className="w-full h-auto" />
           </div>
-          <p className="text-primary-foreground/80 font-serif italic text-lg leading-relaxed mb-6">
-            Hand-crafted French pastries with Taiwanese flavors inspired by seasons.
+          <p className="text-primary-foreground/80 font-serif italic text-lg leading-relaxed mb-4">
+            French pastry, Taiwanese soul.
+          </p>
+          <p className="text-xs tracking-[0.2em] uppercase text-secondary/80 mb-6">
+            San Francisco &middot; Est. 2020 &middot; Third-Culture Bakery
           </p>
           <a href="mailto:lunarbakerysf@gmail.com" className="text-secondary hover:text-white transition-colors">
             lunarbakerysf@gmail.com
