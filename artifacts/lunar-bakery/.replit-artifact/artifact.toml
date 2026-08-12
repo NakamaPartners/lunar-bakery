@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Lunar Bakery"
+description = "A polished, art-directed homepage for Lunar Bakery, a San Francisco artisan bakery making hand-crafted French pastries with Taiwanese flavors inspired by the seasons. Presented as a single-page experience to establish brand identity, showcase seasonal offerings, communicate the pop-up schedule, and direct visitors to order or get notified."
+version = "1.0.0"
+id = "artifacts/lunar-bakery"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21371
+
+[services.development]
+run = "pnpm --filter @workspace/lunar-bakery run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/lunar-bakery", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/lunar-bakery/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21371"
+BASE_PATH = "/"
